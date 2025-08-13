@@ -1,4 +1,15 @@
+name: dbt_redshift_cloud
+version: "1.0.0"
+
+profile: default
+config-version: 2
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
 models:
-  my_new_project:
-    example:
+  my_redshift_project:
+    tables:
       +materialized: table
+    views:
+      +materialized: view
